@@ -4,7 +4,7 @@ Manifest provider for [picocli](https://picocli.info/) which takes the info from
 
 To use build your own provider by extending AbstractManifestVersionProvider:
 
-```
+```java
 public class MyVersionProvider extends AbstractManifestVersionProvider {
 
     public MyVersionProvider() {
@@ -18,7 +18,7 @@ All it requires is the project implementation name as it appears on the manifest
 
 Then it can be added to any picocli command:
 
-```
+```java
 @Command(description = "Menu command" versionProvider = ManifestVersionProvider.class)
 public class Menu
 ```
